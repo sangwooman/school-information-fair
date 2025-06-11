@@ -1,0 +1,73 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 2em;
+    background-color: #fffafc;
+    font-size: 20px; /* Increased base font size */
+  }
+  
+  h1 {
+    color: #d6336c;
+    font-size: 36px;
+  }
+  
+  input {
+    padding: 12px;
+    font-size: 20px;
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 12px 24px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #d6336c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background-color: #b52a59;
+  }
+  
+  #visual {
+    margin-top: 30px;
+  }
+  
+  .line-group {
+    margin: 16px 0;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  
+  .line-group div {
+    display: inline-block;
+    width: 50px;
+    margin: 0 6px;
+    border-bottom: 2px solid #000;
+    padding: 10px;
+    font-size: 24px; /* Increased font size for steps */
+  }
+  
+  .line-group.final-result div {
+    font-size: 48px;
+    font-weight: bold;
+    color: #d6336c;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
