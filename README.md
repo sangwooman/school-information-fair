@@ -1,5 +1,7 @@
 # school-information-fair
 
+## How to use
+
 1. code 누르고 zip 다운받기
    
 ![howtouse1](https://github.com/user-attachments/assets/86126955-ffcd-4605-beaf-5db70bbd0fe8)
