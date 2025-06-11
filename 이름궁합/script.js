@@ -111,18 +111,31 @@ const strokeMap = {
     // Reduction steps
     const finalScore = await reduceToTwoDigits(strokes, visual);
   
-    // Heart
+    // Heart + Message
     const result = document.createElement('div');
     result.className = 'line-group';
     result.style.animationDelay = '400ms';
-    
+  
     const resultBox = document.createElement('div');
     resultBox.textContent = `${finalScore}%`;
     resultBox.style.fontSize = '28px';
     resultBox.style.fontWeight = 'bold';
     resultBox.style.color = '#d6336c';
-    
+  
     result.appendChild(resultBox);
     visual.appendChild(result);
+  
+    // 추가 메시지 조건
+    const score = parseInt(finalScore, 10);
+    if (score >= 80 && score <= 90) {
+      const messageBox = document.createElement('div');
+      messageBox.textContent = '천생연분이네요 💖';
+      messageBox.style.fontSize = '22px';
+      messageBox.style.color = '#d6336c';
+      messageBox.style.marginTop = '10px';
+      messageBox.className = 'line-group';
+      visual.appendChild(messageBox);
+    }
+    
   }
   
